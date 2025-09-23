@@ -10,7 +10,7 @@ class TestimonialController extends Controller
     // List all testimonials
     public function index()
     {
-        return response()->json(Testimonial::all());
+        return response()->json(Testimonial::paginate(15));
     }
 
     // Store new testimonial

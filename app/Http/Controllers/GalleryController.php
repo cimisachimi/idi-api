@@ -13,7 +13,7 @@ class GalleryController extends Controller
     // List all galleries
     public function index()
     {
-        return response()->json(Gallery::all());
+        return response()->json(Gallery::paginate(15));
     }
 
     // Store new gallery item
